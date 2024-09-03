@@ -1,0 +1,937 @@
+
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="assets/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>UTM - X Simposio de Software Libre y Código Abierto de la Mixteca</title>  
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="docs/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="docs/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="docs/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="docs/manifest.json">
+<link rel="mask-icon" href="docs/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="docs/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+      .shadow {
+        box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+      }
+      
+      .carousel-control-prev-icon {        
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='ffffff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        height: 70px;
+        width: 70px; 
+       }
+       
+       .carousel-control-next-icon {
+         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2ffff'  viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+         height: 70px;
+         width: 70px; 
+       }
+       
+
+       .oval-container {
+        width: 200px; /* Adjust width as needed */
+        height: 200px; /* Adjust height as needed */
+        overflow: hidden;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .oval-container img {
+        width: 100%;
+        height: auto;
+      }
+
+      .gray-background {
+        background-color: #808080; /* Gray background color */
+        padding: 20px; /* Optional padding for spacing */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 500px;
+      }
+      .rounded-image {
+        border-radius: 3%;
+        opacity: 0.85;
+      }
+
+
+            
+      .nextprev:hover {
+        box-shadow: 0 0 15px rgba(133, 133, 133, 0.82); 
+      }
+
+            
+      a:link {
+        text-decoration: none;
+      }
+
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a:active {
+        text-decoration: underline;
+      }
+
+      .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 3px solid #e9a39c;
+        font-weight: bold;
+        background-color: #d4d4d4 !important;
+        /* NEW ADDED PART (START) */
+        /*color: #3c5a78 !important; */
+        /*font-family:  YOUR-FONT FAMILY !important;*/
+        /* NEW ADDED PART (END) */
+       
+       }
+
+
+              
+        /* NEW ADDED PART (START) */
+        .nav-tabs>li>a {
+          color: #575757 !important;
+          /*font-family:  YOUR-FONT FAMILY !important;*/
+        }
+
+
+        ul.nav > li > a:hover {
+          background-color: #000000;
+          color: #FFFFFF;
+          border-style: none;
+        }
+
+        .responsive-image.desktop {
+          display: none;
+        }
+
+        .responsive-image.mobile {
+          display: block;
+          width: 100%; 
+        }
+        
+        @media (min-width: 768px) {
+          /* Ocultar la imagen de móviles en computadoras */
+          .responsive-image.mobile {
+              display: none;
+          }
+          
+          /* Mostrar la imagen en computadoras pantalla normal */
+          .responsive-image.desktop {
+              display: block;
+              width: 100%; /* Ajustar el tamaño según sea necesario */
+          }
+        }
+  
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Cambiar tema (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Cambiar tema</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Brillante
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Oscuro
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="http://www.utm.mx">UTM</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Conferencias</a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="participantes.html">Participantes</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="talleres.html">Talleres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="localizacion.html">Localización</a>
+          </li>
+          <li class="nav-item d-flex">
+            
+          <li class="nav-item d-flex">
+            <a class="nav-link text-warning " href="inscripciones.php"> Inscripción a los talleres</a>
+          </li>
+          
+          
+        </ul>
+
+        <!--form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form-->
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators ">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active bg-warning" aria-current="true" aria-label="Imagen 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="bg-warning" aria-label="Imagen 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class="bg-warning" aria-label="Imagen 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!--svg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"/>
+        </svg -->        
+        
+
+        <!-- Imagen para dispositivos móviles y tabletas -->
+        <img src="images/sociedad1_small.png" alt="Imagen para dispositivos móviles y tabletas" class="d-block w-100 responsive-image mobile">
+
+        <!-- Imagen para computadoras -->
+        <img src="images/sociedad1.png" alt="Imagen para computadoras" class="d-block w-100 responsive-image desktop">
+        </body>     
+
+
+        <div class="container" >
+          <div class="carousel-caption text-start d-flex justify-content-center">
+            <div class="card bg-blue-50 opacity-75 w-75 " >                
+                <div class="card-body">
+                  <h1>X Simposio de Software Libre y Código Abierto de la Mixteca </h1>
+                  <p class="card-text">La promoción del software libre es fundamental para fomentar un panorama tecnológico más abierto, colaborativo y equitativo. 
+                    El software libre es esencial para cultivar un mundo digital más abierto, innovador y equitativo. </p>                  
+                </div>
+            </div>
+            <br><br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!--svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg-->
+        
+        <!-- Imagen para dispositivos móviles y tabletas -->
+        <img src="images/auditorio_utm_small.png" alt="Imagen para dispositivos móviles y tabletas" class="d-block w-100 responsive-image mobile">
+
+        <!-- Imagen para computadoras -->
+        <img src="images/auditorio_utm.png" alt="Imagen para computadoras" class="d-block w-100 responsive-image desktop">
+        
+
+        <div class="container">
+          <div class="carousel-caption  d-flex justify-content-center ">
+            <div class="card bg-blue-50 opacity-75 w-75" >                
+                <div class="card-body text-start">
+                  <h1>El software libre en el ámbito universitario y empresarial </h1>
+                  <p class="card-text">El software libre fomenta la innovación y el aprendizaje colaborativo, permitiendo
+                    a los estudiantes explorar, modificar y compartir conocimientos sin restricciones. Esto no solo enriquece su formación académica y habilidades técnicas, 
+                    sino que también prepara a las empresas para adaptarse a un entorno tecnológico en constante evolución. 
+                </p>                  
+                </div>
+            </div>
+            <br><br>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!-- Imagen para dispositivos móviles y tabletas -->
+        <img src="images/ai_development_small.png" alt="Imagen para dispositivos móviles y tabletas" class="d-block w-100 responsive-image mobile">
+
+        <!-- Imagen para computadoras -->
+        <img src="images/ai_development.png" alt="Imagen para computadoras" class="d-block w-100 responsive-image desktop">
+        
+        
+        <div class="container">
+          <div class="carousel-caption text-end d-flex justify-content-center">
+            <div class="card bg-blue-50 opacity-75 w-75 " >                
+                <div class="card-body text-start">
+                  <h1>El software libre y la Inteligencia artificial</h1>
+                  <p class="text-start">La naturaleza abierta del software libre permite a investigadores, desarrolladores
+                     y empresas compartir avances y mejoras en los algoritmos y modelos de IA, acelerando el progreso y la innovación en el campo. Además, 
+                     el acceso abierto a herramientas y plataformas de IA democratiza su uso, permitiendo que más personas y organizaciones puedan beneficiarse y 
+                     contribuir a su desarrollo. Esta apertura y colaboración fomentan la creación de soluciones más robustas, éticas y seguras, esenciales 
+                     para el desarrollo responsable de la IA.
+                </p>                                
+                </div>
+            </div>
+            <br><br>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev " type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+      <span class="visually-hidden">Previo</span>
+    </button>
+    <button class="carousel-control-next " type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true" style="color: #fffa00!important;"></span>
+      <span class="visually-hidden  text-light" style="color:var(--bd-violet-bg)">Siguiente</span>
+    </button>
+     
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      
+      
+      <div class="col-lg-1 text-center">              
+        <div class="container mt-5 d-flex justify-content-center">
+            <div class="oval-container">
+                <h2 onclick="showPanel()" style="font-size: xxx-large;" class="nextprev" >  <img src="images/prev.png">  </h2>
+            </div>
+        </div>        
+      </div><!-- /.col-lg-1 -->
+
+      <div class="col-lg-3 text-center">              
+        <div class="container mt-5 d-flex justify-content-center">
+            <div class="oval-container">
+                <img id="img00" src="images/personas/mnieto.jpg" alt="Example Image">
+            </div>
+        </div>
+        <h4 class="fw-normal text-center" id="name00">María A. Medina</h4>
+        <p class="text-center"  id="text00">Profesora-investigadora del Departamento de Posgrado en la Universidad Politécnica de Puebla. La Dra. Medina pertenece al SNI nivel 1, ... </p>
+        <p class="text-center"><a class="btn btn-secondary" href="#" id="href00">Detalles &raquo;</a></p>
+      </div><!-- /.col-lg-3 -->
+
+      <div class="col-lg-3">
+        <div class="container mt-5 d-flex justify-content-center">
+            <div class="oval-container">
+                <img  id="img01" src="images/personas/aquino.jpg" alt="Example Image">
+            </div>
+        </div>
+        <h4 class="fw-normal text-center"  id="name01">Aquino Velasco O.</h4>
+        <p class="text-center"  id="text01">Ingeniero en Computación trabaja en Datyra Inc., con experiencia en el modelado, implementación y despliegue de algoritmos de Inteligencia Artificial, ...</p>
+        <p class="text-center"><a class="btn btn-secondary" href="#" id="href01">Detalles &raquo;</a></p>
+      </div><!-- /.col-lg-3 -->
+
+      <div class="col-lg-3">
+        <div class="container mt-5 d-flex justify-content-center">
+            <div class="oval-container">
+                <img  id="img02" src="images/personas/efren.jpg" alt="Example Image">
+            </div>
+        </div>
+        <h4 class="fw-normal text-center"  id="name02">Efren Sánchez </h4>
+        <p  class="text-center"  id="text02">Licenciado en Informática, Trabaja para Red Hat México. Desempeñó como servidor público en proyectos de modernización y adopción de software de código abierto, ... </p>
+        <p  class="text-center"><a class="btn btn-secondary" href="#" id="href02">Detalles &raquo;</a></p>
+      </div><!-- /.col-lg-3 -->
+      
+      <div class="col-lg-1 text-center">              
+        <div class="container mt-5 d-flex justify-content-center">
+          
+            <div class="oval-container">
+                <h1 onclick="showPanelPrev()" class="nextprev" style="font-size: xxx-large;"> <img src="images/next.png"> </h1>
+            </div>
+        </div>        
+      </div><!-- /.col-lg-1 -->
+
+    </div><!-- /.row -->
+
+
+    <script>
+      function shuffle(array) {
+        let currentIndex = array.length;
+      
+        // While there remain elements to shuffle...
+        while (currentIndex != 0) {
+      
+          // Pick a remaining element...
+          let randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex--;
+      
+          // And swap it with the current element.
+          [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+      }
+
+      
+      // variable para mostrar a los participantes.
+      var ind_personas= 0;
+
+      
+      function showPanelPrev(){
+        ind_personas = (ind_personas-1+personas.length)%personas.length;
+        console.log("indice " + ind_personas);
+
+        document.getElementById('img00').src=personas[ind_personas  ]['img'];
+        document.getElementById('img01').src=personas[(ind_personas+1)%personas.length ]['img'];
+        document.getElementById('img02').src=personas[(ind_personas+2)%personas.length]['img'];
+
+        document.getElementById('text00').innerHTML=personas[ind_personas  ]['bio'];
+        document.getElementById('text01').innerHTML=personas[(ind_personas+1)%personas.length]['bio'];
+        document.getElementById('text02').innerHTML=personas[(ind_personas+2)%personas.length]['bio'];
+
+        document.getElementById('name00').innerHTML=personas[ind_personas  ]['nombre'];
+        document.getElementById('name01').innerHTML=personas[(ind_personas+1)%personas.length]['nombre'];
+        document.getElementById('name02').innerHTML=personas[(ind_personas+2)%personas.length]['nombre'];
+
+        document.getElementById('href00').href="./participantes.html#" + personas[ind_personas  ]['link'];
+        document.getElementById('href01').href="./participantes.html#" + personas[(ind_personas+1)%personas.length]['link'];
+        document.getElementById('href02').href="./participantes.html#" + personas[(ind_personas+2)%personas.length]['link'];
+
+      }
+
+      function showPanel(){
+        
+        ind_personas = (ind_personas+1)%personas.length;
+        console.log("indice " + ind_personas);
+
+        document.getElementById('img00').src=personas[ind_personas  ]['img'];
+        document.getElementById('img01').src=personas[(ind_personas+1)%personas.length ]['img'];
+        document.getElementById('img02').src=personas[(ind_personas+2)%personas.length]['img'];
+
+        document.getElementById('text00').innerHTML=personas[ind_personas  ]['bio'];
+        document.getElementById('text01').innerHTML=personas[(ind_personas+1)%personas.length]['bio'];
+        document.getElementById('text02').innerHTML=personas[(ind_personas+2)%personas.length]['bio'];
+
+        document.getElementById('name00').innerHTML= personas[ind_personas  ]['nombre'];
+        document.getElementById('name01').innerHTML= personas[(ind_personas+1)%personas.length]['nombre'];
+        document.getElementById('name02').innerHTML= personas[(ind_personas+2)%personas.length]['nombre'];
+    
+        document.getElementById('href00').href="./participantes.html#" + personas[ind_personas  ]['link'];
+        document.getElementById('href01').href="./participantes.html#" + personas[(ind_personas+1)%personas.length]['link'];
+        document.getElementById('href02').href="./participantes.html#" + personas[(ind_personas+2)%personas.length]['link'];
+ 
+
+      }
+
+      var personas=[
+          {"nombre": "María A. Medina",
+          'img': 'images/personas/mnieto.jpg',
+          'link': 'mnieto',
+          "bio": "Profesora-investigadora del Departamento de Posgrado en la Universidad Politécnica de Puebla. La Dra. Medina pertenece al SNI nivel 1, ..."},          
+          {"nombre": "Aquino Velasco O.",
+          'img': 'images/personas/aquino.jpg',
+          'link': 'aquino',
+          "bio": "Ingeniero en Computación trabaja en Datyra Inc., con experiencia en el modelado, implementación y lanzamiento de algoritmos de Inteligencia Artificial, ..."},  
+          {"nombre": "Efren Sánchez",
+          'img': 'images/personas/efren.jpg',
+          'link': 'efren',
+          "bio": "Licenciado en Informática, Trabaja para Red Hat México. Desempeñó como servidor público en proyectos de modernización y adopción de software de código abierto, ... "},  
+          {"nombre": "Tomás Pérez Becerra",
+          'img': 'images/personas/tomasb.jpg',
+          'link': 'tomasb',
+          "bio": "Doctor en Ciencias Matemáticas. Es miembro del SNI de México y cuenta con la distinción Prodep-SEP. Cuenta con diversas publicaciones de artículos científicos indexados en ..."},  
+          {"nombre": "Abel A. Pacheco Angeles",
+          'img': 'images/personas/abel.png',
+          'link': 'abelp',
+          "bio": " Ingeniero Mecatrónico y emprendedor mexicano. Con experiencia en empresas como KadaSoftware y ThunderTix, Abel fundó WaxacaBytes en 2024, ..."},  
+          {"nombre": "Nataly  Coss Sansón",
+          'img': 'images/personas/coss.jpeg',
+          'link': 'coss',
+          "bio": " Maestra  en Administración de Alta Dirección. Se desempeña como Encargada de la Especialidad de Telecomunicaciones y Electrónica en la Unidad de Ingenierías Forenses, ..."},  
+          {"nombre": "Víctor René Silva X.",
+          'img': 'images/personas/victorS.jpeg',
+          'link': 'victors',
+          "bio": "M.C. en Sistemas Computacionales y en Tecnología Educativa. Actualmente se desempeña como Perito de la Especialidad de Informática en la Unidad de Ingenierías Forenses, ..."},  
+          {"nombre": "Israel Bazán",
+          'img': 'images/personas/ibazan.jpg',
+          'link': 'ibazan',
+          "bio": "Ingeniero en Computación de la Universidad Tecnológica de la Mixteca y certificado como SAFe 6 DevOps Practitioner, es Desarrollador FullStack en GSC ... "},  
+
+          
+          {"nombre": "Raúl Cruz Barbosa",
+          'img': 'images/personas/raulc.jpg',
+          'link': 'raulc',
+          "bio": "Doctor en Inteligencia Artificial. Es miembro del SNI desde 2016. Es miembro del cuerpo académico de Reconocimiento de Patrones, trabaja en áreas como inteligencia artificial explicable, ... "},  
+
+          {"nombre": "Gerardo Cruz González",
+          'img': 'images/personas/gerardoc.png',
+          'link': 'gerardoc',
+          "bio": "M.C. en Medios Interactivos. Se ha desempeñado como profesor en la Facultad de Ciencias de la Computación de la Benemérita Universidad Autónoma de Puebla y en la UTM, ..."},  
+
+          {"nombre": "Emmanuel Espinoza",
+          'img': 'images/personas/emmanuelesp.png',
+          'link': 'emmanuelesp',
+          "bio": " Ingeniero en mecatrónica. Con experiencia en el desarrollo y despliegue en producción de algoritmos de Procesamiento de Datos, Procesamiento Generativo del Lenguaje Natural, ...  "},  
+
+          {"nombre": "José A. García Hernández",
+          'img': 'images/personas/josea.png',
+          'link': 'josea',
+          "bio": "  Ingeniero de Software Senior, Experto en diversos lenguajes de programación y tecnologías, como Python, Java, JavaScript, PostgreSQL, MySQL, servicios AWS, ..."},  
+
+          {"nombre": "Lizet Nuñez Martínez",
+          'img': 'images/personas/lizetn.png',
+          'link': 'lizetn',
+          "bio": "Ingeniería en Computación, Backend Head en Ingenia Agency.  Realiza Implementación de soluciones Open Source y es experta en Search Engine Optimization y marketing digital, ... "},  
+
+          {"nombre": "Manuel Hernández G.",
+          'img': 'images/personas/manuelh.png',
+          'link': 'manuelh',
+          "bio": "Doctor por el IIMAS-UNAM, con experiencia en la aplicación de Erlang a diversos problemas distribuidos, con aplicaciones al diseño de ambientes de aprendizaje a distancia,  ..."},   
+
+          {"nombre": "Graciela Castro González",
+          'img': 'images/personas/gracielac.png',
+          'link': 'gracielac',
+          "bio": "Maestra en Ciencias (BUAP). Profesora-Investigadora por la UTM, realiza investigación en métodos numéricos, y ecuaciones diferenciales ordinarias, ...  "},   
+
+          {"nombre": "Virgilio Vázquez Hipólito",
+          'img': 'images/personas/virgiliov.png',
+          'link': 'virgiliov',
+          "bio": "Doctor por el CIMAT. Realiza investigación en el área de la Matemática Aplicada. Desde 2017 pertenece al SNI y a partir de 2020 en el nivel I. ..."},   
+
+        
+      ];
+
+      shuffle(personas);
+      showPanel();
+      console.log(personas);
+
+    </script>
+
+
+    <div class="row  my-5 gy-5">
+      <div class="col-lg-2">&nbsp;</div>
+      <div class="col-lg-8 text-center">
+        <br><br><br>
+        <h1>Conferencias</h1>
+      </div>
+      <div class="col-lg-2">&nbsp;</div>
+
+    </div>
+
+    <div class="row my-2 gy-2">
+      <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active " id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"
+          style="font-size: 18px;"
+          >
+            Jueves 10 de Octubre 
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link  " id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"
+          style="font-size: 18px;">
+             Viernes 11  de Octubre  
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"
+          style="font-size: 18px;  ">
+          Descarga el programa
+        </button>
+        </li>        
+      </ul>
+
+            
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+            
+
+            <div class="row featurette gy-5 my-5">
+              <div class="col-md-12 col-sm-12 col-lg-7">
+                <div class="text-start">
+                  <h1><span class="badge text-bg-secondary">10:00-11:00 hrs </span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1">Software de Código Abierto <span class="text-body-secondary"> desde la perspectiva empresarial </span></h2>
+                <p class=" lead text-end"><a href="participantes.html#efren">Ing. Efrén Sánchez. Red Hat México.  </a></p>
+                <p class="lead">Revisaremos los fundamentos, las empresas que confiaron y que siguen vigentes, el modelo económico y el proceso que lo sustenta para después abordar
+                  el score actual y las tendencias del mercado siendo un espacio para la discusión abierta y la reflexión. </p>
+                <p class="lead"><b>Palabras clave: </b> Software, Código Abierto, Software Libre, Economía, Misión Crítica, Entorno Empresarial, Tendencias, Tecnología, Gobierno, Desarrollo de Software, Nube híbrida.
+
+
+                </p>
+                
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5">
+                <div class="gray-background">
+                    <img src="images/personas/efren.jpg" width="500px" height="500px" alt="api" class="rounded-image">
+                </div>
+              </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+              <div class="col-md-12 col-sm-12 col-lg-7 order-lg-2">
+                <div class="text-end">
+                  <h1><span class="badge text-bg-secondary">11:00-12:00 hrs </span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1">Un modelo de Machine Learning 
+                    <span class="text-body-secondary">para la detección de Malware en sistemas Android </span></h2>
+
+                <p class=" lead text-end"><a href="participantes.html#tomasb">Dr. Tomás Pérez Becerra.Universidad Tecnológica de la Mixteca.</a></p>
+                <p class="lead">
+                  Actualmente, Android es el sistema operativo móvil líder con el mayor porcentaje de cuota de mercado global. La proliferación de mercados de aplicaciones de terceros también lo han convertido en un objetivo popular del malware. El malware es cualquier tipo de software malicioso puede incluir virus, troyanos, ransomware, spyware y otras formas de software malicioso que pueden dañar el dispositivo, robar información personal, comprometer la privacidad del usuario o realizar otras actividades perjudiciales. En esta plática se mostrarán las características para reconocer un ataque y se presentará un modelo de aprendizaje máquina auxiliar en la detección de Malware.
+                </p>
+                <p class="lead">
+                  <b>Palabras Claves:</b> Malware, Android, Machine learning. 
+                </p>
+
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">        
+                <div class="gray-background">
+                    <img src="images/personas/tomasb.jpg" width="500px" height="500px" alt="api" class="rounded-image">
+                </div>
+              </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+              <div class="col-md-12 col-sm-12 col-lg-7">
+                
+                <div class="text-start">
+                  <h1><span class="badge text-bg-secondary">12:00-13:00 hrs </span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1"> Introducción a los LLM's:  <span class="text-body-secondary">Fundamentos y aplicaciones.</span></h2>
+
+                <p class=" lead text-end"><a href="participantes.html#aquino">Ing. Aquino Velasco Osorio. Datyra Inc. </a></p>
+                <p class="lead">
+                  Se exploraran los fundamentos y aplicaciones de los Modelos de Lenguaje de Gran Tamaño (LLM, por sus siglas en inglés). Se abordarán sus principios básicos, incluyendo la arquitectura subyacente y
+                  el proceso de entrenamiento. Además, se discutirá cómo estos modelos, como GPT-4, están transformando áreas como la generación de texto, la traducción automática y la asistencia en la investigación. 
+                  La charla también considerará los desafíos éticos y las limitaciones actuales, proporcionando una visión comprensiva del estado y el futuro de los LLMs.        
+                </p>
+                <p class="lead">
+                  <b>Palabras clave:</b> LLMs, IA generativa, Aplicaciones de LLM's, traducción automática .
+                </p>
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5">
+                <div class="gray-background">
+                    <img src="images/personas/aquino.jpg" width="500px" height="500px" alt="api" class="rounded-image">
+
+                </div>
+              </div>
+            </div>
+
+            <hr class="featurette-divider">
+            
+            <div class="row featurette">
+              <div class="col-md-12 col-sm-12 col-lg-7 order-lg-2">
+                
+                <div class="text-end">
+                  <h1><span class="badge text-bg-secondary">13:00-14:00 hrs </span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1">Software libre para reducir la brecha tecnológica
+                    <span class="text-body-secondary"> en comunidades de Oaxaca </span></h2>
+                <p class=" lead text-end"><a href="participantes.html#abelp"> Ing. Abel Augusto Pacheco Angeles. WaxacaBytes. </a></p>
+                <p class="lead">
+                  Descubre cómo el software libre puede transformar la educación en comunidades rurales de Oaxaca. Exploraremos cómo la implementación de centros de cómputo con Linux y otras soluciones de código abierto está empoderando a estudiantes con habilidades tecnológicas básicas. Hablaremos de las iniciativas que están cerrando la brecha digital y preparando a los alumnos para enfrentar los desafíos del mundo actual. Únete a esta charla para conocer cómo podemos ampliar el apoyo a más comunidades y así abrir nuevas oportunidades en la educación.
+                </p>
+                <p class="lead">
+                  <b>Palabras Claves:</b>  Brecha tecnológica, Comunidades rurales, Educación, Software Libre, Centro de cómputo.
+                </p>
+
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">        
+                <div class="gray-background">
+                    <img src="images/api_image.png" width="500px" height="500px" alt="api" class="rounded-image">
+                </div>
+              </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+        </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+          
+
+          <div class="row featurette gy-5 my-5">
+            <div class="col-md-12 col-sm-12 col-lg-7">
+              <div class="text-start">
+                <h1><span class="badge text-bg-secondary"> 9:00-10:00        hrs </span></h1>
+              </div>
+              <h2 class="featurette-heading fw-normal lh-1">Telecomunicaciones 
+                <span class="text-body-secondary"> Forense </span></h2>
+              <p class=" lead text-end"><a href="participantes.html#coss">Mtra. Nataly  Coss Sansón. Binario Consultores. </a></p>
+              <p class="lead"> Explicar el concepto de Telecomunicaciones Forense, así como las actividades, retos y software a usar.
+              </p>
+              <p class="lead"><b>Palabras clave: </b> ...
+              </p>
+              
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-5">
+              <div class="gray-background">
+                  <img src="images/personas/coss.jpeg" width="500px" height="500px" alt="api" class="rounded-image">
+              </div>
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-12 col-sm-12 col-lg-7 order-lg-2">
+              <div class="text-end">
+                <h1><span class="badge text-bg-secondary">10:00-11:00 hrs </span></h1>
+              </div>
+              <h2 class="featurette-heading fw-normal lh-1">Evidencia 
+                  <span class="text-body-secondary"> Digital </span></h2>
+
+              <p class=" lead text-end"><a href="participantes.html#victors">Mtro. Víctor René Silva Xilotl. Binario Consultores. </a></p>
+              <p class="lead">
+                Explicar el concepto de Evidencia Digital, como generarla, como impacta en una investigación y software de procesamiento.
+              </p>
+              <p class="lead">
+                <b>Palabras Claves:</b> ...
+              </p>
+
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">        
+              <div class="gray-background">
+                  <img src="images/personas/victorS.jpeg" width="500px" height="500px" alt="api" class="rounded-image">
+              </div>
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette">
+            <div class="col-md-12 col-sm-12 col-lg-7">
+              
+              <div class="text-start">
+                <h1><span class="badge text-bg-secondary">11:00-12:00 hrs </span></h1>
+              </div>
+              <h2 class="featurette-heading fw-normal lh-1"> Datos abiertos: definiciones, características de calidad 
+                 <span class="text-body-secondary"> y ejemplo de uso para el estudio exploratorio del ciber-acoso.</span></h2>
+
+              <p class=" lead text-end"><a href="participantes.html#mnieto">Dra. María Auxilio Medina Nieto. Universidad Politécnica de Puebla.              </a></p>
+              <p class="lead">
+                Los datos abiertos son bienes públicos. La conferencia presenta definiciones de datos abiertos, explora fuentes de datos con temáticas de interés nacional. Después, se presentan las
+                 características del modelo de calidad ISO/IEC 25012 y éstas se aplican al Módulo del Ciberacoso del Instituto Nacional de Estadística y Geografía. Posteriormente, se muestra el uso 
+                 de las tecnologías semánticas para construir conjuntos de datos por estado con base en los principios FAIR, siglas que corresponden a los términos en inglés findable, accesible, 
+                 interoperable y reusable. Finalmente, se exponen los retos de la gestión de los datos abiertos.
+
+              </p>
+              <p class="lead">
+                <b>Palabras clave:</b> datos abiertos, ISO/IEC 25012, principios FAIR, ciber-acoso.
+              </p>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-5">
+              <div class="gray-background">
+                  <img src="images/personas/mnieto.jpg" width="500px" height="500px" alt="api" class="rounded-image">
+              </div>
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+          
+          <div class="row featurette">
+            <div class="col-md-12 col-sm-12 col-lg-7 order-lg-2">
+              
+              <div class="text-end">
+                <h1><span class="badge text-bg-secondary">12:00-13:00 hrs </span></h1>
+              </div>
+              <h2 class="featurette-heading fw-normal lh-1">DevSecOps: Herramientas Open Source 
+                  <span class="text-body-secondary"> para la implementación de Pipelines. </span></h2>
+              <p class=" lead text-end"><a href="participantes.html#ibazan"> Ing. Israel Bazán. HSBC Centro de Cómputo Toluca  Área de GPS (Global Payments Sistemas)               </a></p>
+              <p class="lead">
+                DevSecOps es una práctica que combina Desarrollo (Dev), Operaciones (Ops) y Seguridad (Sec) para integrar la seguridad en todo el ciclo de vida del desarrollo de software. En el
+                contexto del Scaled Agile Framework (SAFe), DevSecOps se enfoca en acelerar el flujo de valor al tiempo que se garantiza la seguridad y la calidad del software. La combinación 
+                de SAFe y DevSecOps permite a las grandes empresas acelerar su negocio mientras mantienen altos estándares de seguridad y calidad. Implementar un pipeline con herramientas de 
+                código abierto puede ser una excelente manera de gestionar y automatizar el flujo de trabajo en el desarrollo de software.
+              </p>
+              <p class="lead">
+                <b>Palabras Claves:</b>  DevOps, DevSecOps, Scaled Agile Framework, Value Stream, Open Source, IT Security, OWASP, Continuous Delivery Pipeline.
+
+              </p>
+
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">        
+              <div class="gray-background">
+                  <img src="images/personas/ibazan.jpg" width="500px" height="500px" alt="api" class="rounded-image">
+              </div>
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+
+
+          
+          
+        </div>
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+          <br><br><br>
+
+          <!-- Imagen para tabletas -->
+          <img src="images/Conferencias_SSL_2024_800.jpg" alt="Imagen para dispositivos móviles y tabletas" class="d-block w-100 responsive-image mobile">
+
+          <!-- Imagen para computadoras -->
+          <!-- img src="images/Conferencias_SSL_2024_1024.jpg" alt="Imagen para computadoras" class="d-block w-100 responsive-image desktop"-->
+
+
+          <br><br>
+          <h4>
+          <a href="images/Conferencias_SSL_2024.jpg"> Haz click en este enlace para abrir la imagen en una pestaña nueva. 
+            <img src="images/download.png" width="30">
+             </a>
+
+          </h4>  
+
+          <br><br><br>
+        </div>        
+      </div>
+
+          
+ 
+    </div>
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Ir al inicio de la página</a></p>
+    <p>&copy; 2024 Universidad Tecnológica de la Mixteca &middot; <!--a href="#">Privacy</!--a> &middot; <a-- href="#">Terms</a--></p>
+  </footer>
+</main>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

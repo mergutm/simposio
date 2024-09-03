@@ -1,0 +1,903 @@
+
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="assets/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>UTM - X Simposio de Software Libre y Código Abierto de la Mixteca</title>  
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="docs/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="docs/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="docs/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="docs/manifest.json">
+<link rel="mask-icon" href="docs/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="docs/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+      .shadow {
+        box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+      }
+      
+      .carousel-control-prev-icon {        
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='ffffff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        height: 70px;
+        width: 70px; 
+       }
+       
+       .carousel-control-next-icon {
+         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2ffff'  viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+         height: 70px;
+         width: 70px; 
+       }
+       
+
+       .oval-container {
+        width: 200px; /* Adjust width as needed */
+        height: 200px; /* Adjust height as needed */
+        overflow: hidden;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .oval-container img {
+        width: 100%;
+        height: auto;
+      }
+
+      .gray-background {
+        background-color: #808080; /* Gray background color */
+        padding: 20px; /* Optional padding for spacing */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 500px;
+      }
+      .rounded-image {
+        border-radius: 3%;
+        opacity: 0.85;
+      }
+
+
+            
+      .nextprev:hover {
+        box-shadow: 0 0 15px rgba(133, 133, 133, 0.82); 
+      }
+
+            
+      a:link {
+        text-decoration: none;
+      }
+
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a:active {
+        text-decoration: underline;
+      }
+
+      .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 3px solid #e9a39c;
+        font-weight: bold;
+        background-color: #d4d4d4 !important;
+        /* NEW ADDED PART (START) */
+        /*color: #3c5a78 !important; */
+        /*font-family:  YOUR-FONT FAMILY !important;*/
+        /* NEW ADDED PART (END) */
+       
+       }
+
+
+              
+        /* NEW ADDED PART (START) */
+        .nav-tabs>li>a {
+          color: #575757 !important;
+          /*font-family:  YOUR-FONT FAMILY !important;*/
+        }
+
+
+        ul.nav > li > a:hover {
+          background-color: #000000;
+          color: #FFFFFF;
+          border-style: none;
+        }
+  
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Cambiar tema (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Cambiar tema</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Brillante
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Oscuro
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="http://www.utm.mx">UTM</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html">Conferencias</a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="participantes.html">Participantes</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link active" href="talleres.html">Talleres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="localizacion.html">Localización</a>
+          </li>
+          
+          <li class="nav-item d-flex">
+            <a class="nav-link text-warning " href="inscripciones.php"> Inscripción a los talleres</a>
+          </li>
+          
+          
+        </ul>
+        <!--form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form-->
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+ 
+  <div class="container marketing">
+
+    <div class="row  my-5 gy-5">
+      <div class="col-lg-2">&nbsp;</div>
+      <div class="col-lg-8 text-center">
+        <br><br><br>
+        <h1>Talleres</h1>
+      </div>
+      <div class="col-lg-2">&nbsp;</div>
+
+    </div>
+
+    <div class="row my-2 gy-2">
+      <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active " id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"
+          style="font-size: 18px;"
+          >
+            Jueves 10 de Octubre 
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link  " id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"
+          style="font-size: 18px;">
+             Viernes 11  de Octubre  
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"
+          style="font-size: 18px;  ">
+          Descarga el programa
+        </button>
+        </li>        
+      </ul>
+
+            
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+            
+
+            <div class="row featurette gy-5 my-5">
+              <div class="col-md-12 col-sm-12 col-lg-7">
+                <div class="text-start">
+                  <h1><span class="badge text-bg-secondary">16:00 a 19:00 hrs </span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1">Programación básica <span class="text-body-secondary">  en python.  (día 1)</span></h2>
+                <p class=" lead text-end"><a href="participantes.html#raulc">Dr. Raúl Cruz Barbosa (UTM).  </a></p>
+                <p class="lead">
+                    En este taller se introduce al estudiante con los aspectos básicos del lenguaje de programación Python. Esto es, las características del lenguaje, tipos de datos, operadores, manejo de estructuras de control, así como la implementación de soluciones para diversos ejercicios son contemplados para su exposición. También, se abordan particularidades del lenguaje para manejo de secuencias y cadenas. Este taller está enfocado para principiantes que no han programado anteriormente, así como para programadores de otros lenguajes que desean comenzar a programar en el lenguaje Python.
+
+                   </p>
+                <p class="lead"><b>Conocimientos que debe tener el asistente: </b> 
+                   Nivel de programación: nulo o principiante.  Los participantes deben contar con cuenta de gmail (no de gs.utm.mx). 
+                </p>
+
+                <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+
+
+                
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5">
+                <div class="gray-background">
+                    <img src="images/personas/raulc.jpg" width="500px" height="500px" alt="api" class="rounded-image">
+                </div>
+              </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+              <div class="col-md-12 col-sm-12 col-lg-7 order-lg-2">
+                <div class="text-end">
+                  <h1><span class="badge text-bg-secondary">16:00 a 19:00 hrs </span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1">Hardware y software libre 
+                    <span class="text-body-secondary">en la educación.  </span></h2>
+
+                <p class=" lead text-end"><a href="participantes.html#gerardoc">M.C. Gerardo Cruz González (UTM)</a></p>
+                <p class="lead">
+                  Se recomienda que los estudiantes que inician su vida universitaria en las áreas de Ingeniería en Computación, Ingeniería en Electrónica e Ingeniería en Mecatrónica, conozcan el software libre (SL). La utilización del software y hardware libre promueve la formación ética de los estudiantes evitando el uso ilegal de productos informáticos, promueve la reutilización y el estudio del código fuente, así como el aprovechamiento de equipos de cómputo a los cuales ya no se les puede instalar software privativo.
+                </p>
+                <p class="lead">
+                  <b>Conocimientos que debe tener el asistente:</b>  Ninguno, será un curso introductorio básico. 
+                </p>
+
+                <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">        
+                <div class="gray-background">
+                    <img src="images/personas/gerardoc.png" width="500px" height="500px" alt="api" class="rounded-image">
+                </div>
+              </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+              <div class="col-md-12 col-sm-12 col-lg-7">
+                
+                <div class="text-start">
+                  <h1><span class="badge text-bg-secondary"> 16:00 a 19:00  hrs</span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1"> Algoritmos de Machine Learning  <span class="text-body-secondary"> en Python.</span></h2>
+
+                <p class=" lead text-end"><a href="participantes.html#aquino">Dr. Tomás Pérez Becerra (UTM).  </a></p>
+                <p class="lead">
+                  El machine learning, o aprendizaje automático, es un campo de la inteligencia artificial que se centra en el desarrollo de algoritmos que permiten a las computadoras aprender y mejorar su rendimiento partir de datos, sin necesidad de ser explícitamente programadas para cada tarea. En lugar de seguir instrucciones específicas, las máquinas utilizan patrones y correlaciones en los datos para hacer predicciones o tomar decisiones. Sus aplicaciones van desde el reconocimiento de voz y la visión por computadora hasta la optimización de procesos. En este taller veremos los conceptos básicos y se realizará la programación de algunos algoritmos con aplicaciones interesantes.
+
+                </p>
+                <p class="lead">
+                  <b>Conocimientos que debe tener el asistente:</b>  Ningún conocimiento previo requerido, los participantes deben contar con cuenta de gmail (no de gs.utm.mx). 
+                </p>
+
+                <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+                
+
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5">
+                <div class="gray-background">
+                    <img src="images/personas/tomasb.jpg" width="500px" height="500px" alt="api" class="rounded-image">
+                </div>
+              </div>
+            </div>
+
+            <hr class="featurette-divider">
+            
+            <div class="row featurette">
+              <div class="col-md-12 col-sm-12 col-lg-7 order-lg-2">
+                
+                <div class="text-end">
+                  <h1><span class="badge text-bg-secondary"> 16:00 a 19:00  hrs </span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1">Creación de un chatbot con LLama2 usando Langchain 
+                    <span class="text-body-secondary"> y desplegado usando Truss (día 1) </span></h2>
+                <p class=" lead text-end"><a href="participantes.html#aquino"> Ing. Aquino Velasco Osorio, , Datyra Inc. </a></p>
+                <p class=" lead text-end"><a href="participantes.html#emmanuelesp"> Ing. Emmanuel Espinoza, Broxel S.A. de C.V. </a></p>
+                <p class="lead">
+                  En este taller, aprenderás a crear un chatbot utilizando LLama2 y la librería Langchain. 
+                  El proceso incluirá desde el modelado y la implementación hasta el despliegue del chatbot con Truss. 
+                  Los participantes recibirán una guía paso a paso para configurar y entrenar el modelo, así como técnicas para optimizar su rendimiento. 
+                  Además, se enseñará cómo probar y ajustar el chatbot para asegurar su funcionalidad y eficacia. Al finalizar, tendrás un chatbot 
+                  completamente operativo y los conocimientos necesarios para aplicarlo en diversos contextos.
+                </p>
+                <p class="lead">
+                  <b>Conocimientos que debe tener el asistente:</b>  Conocimientos básicos de programación en Python.
+                  Los participantes deben contar con cuenta de gmail (no de gs.utm.mx).                   
+                </p>
+
+                <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+
+
+
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">        
+                <div class="gray-background">
+                    <img src="images/personas/aquino.jpg" width="500px" height="500px" alt="api" class="rounded-image">
+                </div>
+              </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            
+            <div class="row featurette gy-5 my-5">
+              <div class="col-md-12 col-sm-12 col-lg-7">
+                <div class="text-start">
+                  <h1><span class="badge text-bg-secondary">  16:00 a 19:00  hrs </span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1">FastAPI-Construcción de API’s
+                  <span class="text-body-secondary">  con Python (día 1) </span></h2>
+                <p class=" lead text-end"><a href="participantes.html#josea">M.E.C. José Antonio García Hernández.  </a></p>
+                <p class="lead"> 
+                  Aprende a crear APIs RESTful robustas y escalables con FastAPI y Python en este curso. Domina los fundamentos, desde la instalación y configuración hasta el modelado de datos, la seguridad, la calidad y el despliegue.
+                </p>
+                <b>Conocimientos que debe tener el asistente:</b>  Conocimientos básicos de programación en Python. 
+                </p>
+
+                <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+                
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5">
+                <div class="gray-background">
+                    <img src="images/personas/josea.png" width="500px" height="500px" alt="api" class="rounded-image">
+                </div>
+              </div>
+            </div>
+
+
+
+            <hr class="featurette-divider">
+            
+            <div class="row featurette">
+              <div class="col-md-12 col-sm-12 col-lg-7 order-lg-2">
+                
+                <div class="text-end">
+                  <h1><span class="badge text-bg-secondary"> 16:00 a 19:00  hrs </span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1">Desarrollo de aplicaciones web 
+                    <span class="text-body-secondary"> con MODx CMS. (día 1) </span></h2>
+                <p class=" lead text-end"><a href="participantes.html#lizetn"> Ing. Lizet Nuñez Martínez. Ingenia Agency </a></p>                
+                <p class="lead">
+                  En este taller aprenderás a utilizar un Gestor de Contenidos para la construcción de aplicaciones Web. Modx es lo mejor de un CMS Open Source y Frameworks de 
+                  desarrollo. Rápido, seguro y flexible.
+                </p>
+                <p class="lead">
+                  <b>Requerimientos de hardware y software: </b>  Procesador Intel Core i5, 8 GB Ram, 8GB almacenamiento. Conexión a internet. Apache 2.x, Php 8.x, MariaDB 10.x.
+                </p>
+                <p class="lead"> 
+                  <b>Conocimientos que debe tener el asistente:</b>  Conocimientos programación PHP, Python o C. HTML, javascript y CSS. Bases de datos MySQL.
+               
+                </p>
+
+                <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">        
+                <div class="gray-background">
+                    <img src="images/personas/lizetn.png" width="500px" height="500px" alt="api" class="rounded-image">
+                </div>
+              </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+
+
+
+            <div class="row featurette gy-5 my-5">
+              <div class="col-md-12 col-sm-12 col-lg-7">
+                <div class="text-start">
+                  <h1><span class="badge text-bg-secondary">  16:00 a 19:00  hrs </span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1">Erlang: El paradigma funcional para resolver
+                  <span class="text-body-secondary">  problemas concurrentes.  (día 1) </span></h2>
+                <p class=" lead text-end"><a href="participantes.html#manuelh">Dr. Manuel Hernández Gutiérrez. Universidad Tecnológica de la Mixteca.   </a></p>
+                <p class="lead"> 
+                  En este taller se mostrarán las características distintivas del lenguaje de programación funcional Erlang. Parte de este taller está destinado a comprender y dominar herramientas funcionales. Otra parte está destinado a comprender la noción de un proceso en Erlang. Será de particular interés el enfatizar cómo Erlang facilita la creación, mantenimiento  y escalabilidad de aplicaciones en donde la concurrencia es indispensable.
+                </p>
+                <p class="lead"> 
+                <b>Requerimientos de hardware y software: </b>  Conexión en red, software, Erlang, instalable en ambientes Linux (sudo apt-get install erlang-base).  Editor de texto convencional (nano, gedit, emacs).
+                </p>
+                <p class="lead"> 
+
+                <b>Conocimientos que debe tener el asistente:</b>  Manejo de algún lenguaje de programación.
+                </p>
+
+                <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+                
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5">
+                <div class="gray-background">
+                    <img src="images/personas/manuelh.png" width="500px" height="500px" alt="api" class="rounded-image">
+                </div>
+              </div>
+            </div>
+
+
+
+            <hr class="featurette-divider">
+  
+            <div class="row featurette">
+              <div class="col-md-12 col-sm-12 col-lg-7 order-lg-2">
+                
+                <div class="text-end">
+                  <h1><span class="badge text-bg-secondary"> 16:00 a 19:00  hrs </span></h1>
+                </div>
+                <h2 class="featurette-heading fw-normal lh-1">Python una herramienta de apoyo 
+                    <span class="text-body-secondary"> en el aprendizaje del Cálculo. (día 1) </span></h2>
+                
+                  <p class=" lead text-end"><a href="participantes.html#gracielac"> M.C. Graciela Castro González. Universidad Tecnológica de la Mixteca.  </a></p>                
+                  <p class=" lead text-end"><a href="participantes.html#virgiliov"> Dr. Virgilio Vázquez Hipólito. Universidad Tecnológica de la Mixteca.  </a></p>                
+
+                <p class="lead">
+                  Los modelos de optimización requieren de conocimientos y destrezas del cálculo diferencial, además de comprender el problema a resolver; 
+                  si se conocen algunos apoyos que nos faciliten esta tarea, la labor del investigador o estudiante se centraría en la interpretación que la solución aporta
+                   al problema planteado. En este taller aprenderemos a usar los módulos de sympy y matplotlib de Python con la finalidad de apoyar en el proceso de derivación.
+                    Al final, presentaremos un modelo de combate de incendios forestales.
+
+                </p>
+                <p class="lead">
+                  <b>Requerimientos de hardware y software: </b> Python, PyCharm, Visual Studio Code. Módulos:  Sympy, matplotlib y numpy. Se requiere que los participantes tengan 
+                  una cuenta de gmail (que no sea de gs.utm.mx).
+
+                </p>
+                <p class="lead"> 
+                  <b>Conocimientos que debe tener el asistente:</b>  Se requiere conocimientos del cálculo diferencial en una variable, deseos de aprender.
+
+
+               
+                </p>
+
+                <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+
+              </div>
+              <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">        
+                <div class="gray-background">
+                    <img src="images/personas/gracielac.png" width="500px" height="500px" alt="api" class="rounded-image">
+                </div>
+              </div>
+            </div>
+
+
+        </div>
+        <!--  
+        ***************************************************** 
+        ***************************************************** 
+        ***************************************************** 
+        ***************************************************** 
+        ***************************************************** 
+        ***************************************************** 
+        ***************************************************** 
+        ***************************************************** 
+        ***************************************************** 
+        ***************************************************** 
+        -->
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+          
+
+          <div class="row featurette gy-5 my-5">
+            <div class="col-md-12 col-sm-12 col-lg-7">
+              <div class="text-start">
+                <h1><span class="badge text-bg-secondary"> 16:00 a 19:00  hrs </span></h1>
+              </div>
+              <h2 class="featurette-heading fw-normal lh-1">FastAPI-Construcción de API’s
+                <span class="text-body-secondary">  con Python (día 2) </span></h2>
+              <p class=" lead text-end"><a href="participantes.html#josea">M.E.C. José Antonio García Hernández.  </a></p>
+              <p class="lead"> 
+                Aprende a crear APIs RESTful robustas y escalables con FastAPI y Python en este curso. Domina los fundamentos, desde la instalación y configuración hasta el modelado de datos, la seguridad, la calidad y el despliegue.
+              </p>
+              <b>Conocimientos que debe tener el asistente:</b>  Conocimientos básicos de programación en Python. 
+              </p>
+
+              <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+              
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-5">
+              <div class="gray-background">
+                  <img src="images/personas/josea.png" width="500px" height="500px" alt="api" class="rounded-image">
+              </div>
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+          
+          <div class="row featurette">
+            <div class="col-md-12 col-sm-12 col-lg-7 order-lg-2">
+              
+              <div class="text-end">
+                <h1><span class="badge text-bg-secondary"> 16:00 a 19:00  hrs </span></h1>
+              </div>
+              <h2 class="featurette-heading fw-normal lh-1">Creación de un chatbot con LLama2 usando Langchain 
+                  <span class="text-body-secondary"> y desplegado usando Truss (día 2) </span></h2>
+              <p class=" lead text-end"><a href="participantes.html#aquino"> Ing. Aquino Velasco Osorio, Datyra Inc. </a></p>
+              <p class=" lead text-end"><a href="participantes.html#emmanuelesp"> Ing. Emmanuel Espinoza, Broxel S.A. de C.V. </a></p>
+              <p class="lead">
+                En este taller, aprenderás a crear un chatbot utilizando LLama2 y la librería Langchain. 
+                El proceso incluirá desde el modelado y la implementación hasta el despliegue del chatbot con Truss. 
+                Los participantes recibirán una guía paso a paso para configurar y entrenar el modelo, así como técnicas para optimizar su rendimiento. 
+                Además, se enseñará cómo probar y ajustar el chatbot para asegurar su funcionalidad y eficacia. Al finalizar, tendrás un chatbot 
+                completamente operativo y los conocimientos necesarios para aplicarlo en diversos contextos.
+              </p>
+              <p class="lead">
+                <b>Conocimientos que debe tener el asistente:</b>  Conocimientos básicos de programación en Python.
+                Los participantes deben contar con cuenta de gmail (no de gs.utm.mx).                   
+              </p>
+
+              <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">        
+              <div class="gray-background">
+                  <img src="images/personas/emmanuelesp.png" width="500px" height="500px" alt="api" class="rounded-image">
+              </div>
+            </div>
+          </div>
+
+          
+
+          <hr class="featurette-divider">
+
+
+          <div class="row featurette gy-5 my-5">
+            <div class="col-md-12 col-sm-12 col-lg-7">
+              <div class="text-start">
+                <h1><span class="badge text-bg-secondary">  16:00 a 19:00  hrs </span></h1>
+              </div>
+              <h2 class="featurette-heading fw-normal lh-1">Erlang: El paradigma funcional para resolver
+                <span class="text-body-secondary">  problemas concurrentes.  (día 2) </span></h2>
+              <p class=" lead text-end"><a href="participantes.html#manuelh">Dr. Manuel Hernández Gutiérrez. Universidad Tecnológica de la Mixteca.   </a></p>
+              <p class="lead"> 
+                En este taller se mostrarán las características distintivas del lenguaje de programación funcional Erlang. Parte de este taller está destinado a comprender y dominar herramientas funcionales. Otra parte está destinado a comprender la noción de un proceso en Erlang. Será de particular interés el enfatizar cómo Erlang facilita la creación, mantenimiento  y escalabilidad de aplicaciones en donde la concurrencia es indispensable.
+              </p>
+              <p class="lead"> 
+              <b>Requerimientos de hardware y software: </b>  Conexión en red, software, Erlang, instalable en ambientes Linux (sudo apt-get install erlang-base).  Editor de texto convencional (nano, gedit, emacs).
+              </p>
+              <p class="lead"> 
+
+              <b>Conocimientos que debe tener el asistente:</b>  Manejo de algún lenguaje de programación.
+              </p>
+
+              <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+              
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-5">
+              <div class="gray-background">
+                  <img src="images/personas/manuelh.png" width="500px" height="500px" alt="api" class="rounded-image">
+              </div>
+            </div>
+          </div>
+
+          
+          <hr class="featurette-divider">
+  
+          <div class="row featurette">
+            <div class="col-md-12 col-sm-12 col-lg-7 order-lg-2">
+              
+              <div class="text-end">
+                <h1><span class="badge text-bg-secondary"> 16:00 a 19:00  hrs </span></h1>
+              </div>
+              <h2 class="featurette-heading fw-normal lh-1">Python una herramienta de apoyo 
+                  <span class="text-body-secondary"> en el aprendizaje del Cálculo. (día 2) </span></h2>
+              <p class=" lead text-end"><a href="participantes.html#gracielac"> M.C. Graciela Castro González. Universidad Tecnológica de la Mixteca.  </a></p>                
+              <p class=" lead text-end"><a href="participantes.html#virgiliov"> Dr. Virgilio Vázquez Hipólito. Universidad Tecnológica de la Mixteca.  </a></p>                
+              <p class="lead">
+                Los modelos de optimización requieren de conocimientos y destrezas del cálculo diferencial, además de comprender el problema a resolver; 
+                si se conocen algunos apoyos que nos faciliten esta tarea, la labor del investigador o estudiante se centraría en la interpretación que la solución aporta
+                 al problema planteado. En este taller aprenderemos a usar los módulos de sympy y matplotlib de Python con la finalidad de apoyar en el proceso de derivación.
+                  Al final, presentaremos un modelo de combate de incendios forestales.
+
+              </p>
+              <p class="lead">
+                <b>Requerimientos de hardware y software: </b> Python, PyCharm, Visual Studio Code. Módulos:  Sympy, matplotlib y numpy. Se requiere que los participantes tengan 
+                una cuenta de gmail (que no sea de gs.utm.mx).
+
+              </p>
+              <p class="lead"> 
+                <b>Conocimientos que debe tener el asistente:</b>  Se requiere conocimientos del cálculo diferencial en una variable, deseos de aprender.             
+              </p>
+
+              <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">        
+              <div class="gray-background">
+                  <img src="images/personas/virgiliov.png" width="500px" height="500px" alt="api" class="rounded-image">
+              </div>
+            </div>
+          </div>
+              
+
+          
+          <hr class="featurette-divider">
+
+          <div class="row featurette gy-5 my-5">
+            <div class="col-md-12 col-sm-12 col-lg-7">
+              <div class="text-start">
+                <h1><span class="badge text-bg-secondary">  16:00 a 19:00  hrs </span></h1>
+              </div>
+              <h2 class="featurette-heading fw-normal lh-1">Uso del lenguaje SPARQL para generar 
+                <span class="text-body-secondary">y consultar datos abiertos.  </span></h2>
+              <p class=" lead text-end"><a href="participantes.html#mnieto">Dra. María Auxilio Medina Nieto. Universidad Politécnica de Puebla.  </a></p>
+              
+              <p class="lead"> 
+                El marco de descripción de recursos, (en inglés, Resource Description Framework, RDF), es un modelo de datos utilizado en los conjuntos de datos abiertos enlazados y aplicaciones de 
+                la web semántica. El propósito del taller es generar y consultar conjuntos de datos utilizando SPARQL, el lenguaje de consulta para RDF. Primero, se expondrán los conceptos básicos de RDF.
+                 Después, los participantes construirán conjuntos de datos propios. Posteriormente, se ejecutarán consultas predefinidas sobre los conjuntos construidos y otras fuentes utilizando el 
+                 software de Apache Jena Fuseki.
+    
+              </p>
+              <p class="lead"> 
+              <b>Requerimientos de hardware y software: </b>  computadoras con conexión a internet, instalación del servicio Apache Jena Fuseki (versión 5.0.0).
+               El software está disponible en:  https://jena.apache.org/documentation/fuseki2/
+
+              </p>
+              <p class="lead"> 
+              <b>Conocimientos que debe tener el asistente:</b> Bases de datos, SQL.
+
+              </p>
+
+              <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+              
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-5">
+              <div class="gray-background">
+                  <img src="images/personas/mnieto.jpg" width="500px" height="500px" alt="api" class="rounded-image">
+              </div>
+            </div>
+          </div>
+          <hr class="featurette-divider">
+
+                
+          <div class="row featurette">
+            <div class="col-md-12 col-sm-12 col-lg-7 order-lg-2">
+              
+              <div class="text-end">
+                <h1><span class="badge text-bg-secondary"> 16:00 a 19:00  hrs </span></h1>
+              </div>
+              <h2 class="featurette-heading fw-normal lh-1">Desarrollo de aplicaciones web 
+                  <span class="text-body-secondary"> con MODx CMS. (día 2) </span></h2>
+              <p class=" lead text-end"><a href="participantes.html#lizetn"> Ing. Lizet Nuñez Martínez. Ingenia Agency </a></p>                
+              <p class="lead">
+                En este taller aprenderás a utilizar un Gestor de Contenidos para la construcción de aplicaciones Web. Modx es lo mejor de un CMS Open Source y Frameworks de 
+                desarrollo. Rápido, seguro y flexible.
+              </p>
+              <p class="lead">
+                <b>Requerimientos de hardware y software: </b>  Procesador Intel Core i5, 8 GB Ram, 8GB almacenamiento. Conexión a internet. Apache 2.x, Php 8.x, MariaDB 10.x.
+              </p>
+              <p class="lead"> 
+                <b>Conocimientos que debe tener el asistente:</b>  Conocimientos programación PHP, Python o C. HTML, javascript y CSS. Bases de datos MySQL.
+             
+              </p>
+
+              <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+    
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">        
+              <div class="gray-background">
+                  <img src="images/personas/lizetn.png" width="500px" height="500px" alt="api" class="rounded-image">
+              </div>
+            </div>
+          </div>
+    
+
+          <hr class="featurette-divider">
+
+          <div class="row featurette gy-5 my-5">
+            <div class="col-md-12 col-sm-12 col-lg-7">
+              <div class="text-start">
+                <h1><span class="badge text-bg-secondary">  16:00 a 19:00  hrs </span></h1>
+              </div>
+              <h2 class="featurette-heading fw-normal lh-1">Programación  básica <span class="text-body-secondary">  en python (día 2). </span></h2>
+              <p class=" lead text-end"><a href="participantes.html#raulc">Dr. Raúl Cruz Barbosa (UTM).   </a>
+              </p>
+               
+              <p class="lead">
+                En este taller se introduce al estudiante con los aspectos básicos del lenguaje de programación Python. Esto es, las características del lenguaje, tipos de datos, operadores, manejo de estructuras de control, así como la implementación de soluciones para diversos ejercicios son contemplados para su exposición. También, se abordan particularidades del lenguaje para manejo de secuencias y cadenas. Este taller está enfocado para principiantes que no han programado anteriormente, así como para programadores de otros lenguajes que desean comenzar a programar en el lenguaje Python.
+               </p>
+            <p class="lead"><b>Conocimientos que debe tener el asistente: </b> 
+               Nivel de programación: nulo o principiante. Los participantes deben contar con cuenta de gmail (no de gs.utm.mx). 
+            </p>
+
+            <p class="lead"><br><b><a class="nav-link text-warning " href="inscripciones.php"> Inscríbete a este taller</a></b> </p>
+              
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-5">
+              <div class="gray-background">
+                  <img src="images/personas/raulc.jpg" width="500px" height="500px" alt="api" class="rounded-image">
+              </div>
+            </div>
+          </div>
+    
+     
+
+          <hr class="featurette-divider">
+    
+
+
+
+          
+        </div>
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+          <br><br><br>
+
+          
+          <!-- Imagen para tabletas -->
+          <img src="images/Talleres_SSL_2024_800.jpg" alt="Imagen para dispositivos móviles y tabletas" class="d-block w-100 responsive-image mobile">
+
+          <!-- Imagen para computadoras -->
+          <!-- img src="images/Talleres_SSL_2024_1024.jpg" alt="Imagen para computadoras" class="d-block w-100 responsive-image desktop"-->
+         
+
+          <br><br>
+          <h4>
+          <a href="images/Talleres_SSL_2024.jpg"> Haz click en este enlace para abrir la imagen en una pestaña nueva. 
+            <img src="images/download.png" width="30">
+             </a>
+
+          </h4>  
+
+
+          
+          <br><br><br>
+        </div>        
+      </div>
+
+          
+ 
+    </div>
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Ir al inicio de la página</a></p>
+    <p>&copy; 2024 Universidad Tecnológica de la Mixteca &middot; <!--a href="#">Privacy</!--a> &middot; <a-- href="#">Terms</a--></p>
+  </footer>
+</main>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
